@@ -14,9 +14,10 @@ const PORT = process.env.PORT || 8000;
 const app = express();
 
 /* Middlewares */
+// index.js
 const allowedOrigins = [
-  "http://localhost:5173",
-  "https://linkify-frontend-sooty.vercel.app"
+  process.env.FRONTEND_URL_DEV,
+  process.env.FRONTEND_URL_PROD
 ];
 
 app.use(cors({
